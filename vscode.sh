@@ -27,7 +27,7 @@ elif [[ \$(which dnf &> /dev/null && echo '1') == '1' ]]; then
 fi
 rm -rf install.sh
 clear
-echo -e "\e[5mThank you for using my Script!\nAuthor: Shota from ITVET group 67\e[0m"
+echo -e "\e[5mEnjoy your coding\nScript was made by Shota from ITVET group 67\e[0m"
 done
 chmod +x install.sh
 gnome-terminal -x sh -c "./install.sh; bash"
