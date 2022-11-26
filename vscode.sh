@@ -20,14 +20,15 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 	code
 elif [[ \$(which dnf &> /dev/null && echo '1') == '1' ]]; then
 	sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+	sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 	dnf check-update
 	sudo dnf install code -y
 	code
 fi
 rm -rf install.sh
+clear
 echo 'Thank you for using my Script!
-Author: Shota Melkor from ITVET group 67'
+Author: Shota from ITVET group 67'
 done
 chmod +x install.sh
 gnome-terminal -x sh -c "./install.sh; bash"
